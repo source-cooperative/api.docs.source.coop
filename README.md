@@ -1,10 +1,7 @@
+# api.docs.source.coop
 
-## Build Documentation
+The Source Cooperative API reference, served by GitHub Pages.
 
-To build the documentation, make sure the frontend is running locally at `http://localhost:3000` and run the following command:
+`index.html` renders the OpenAPI document that source.coop generates from its own route definitions, fetched live from <https://source.coop/api/openapi>. Nothing here needs rebuilding when the API changes: an endpoint appears once it is deployed to source.coop.
 
-```
-curl http://localhost:3000/api/openapi -o openapi.json && npx @redocly/cli build-docs openapi.json && mv redoc-static.html index.html
-```
-
-Commit your changes and push to main; the website should be updated now.
+To read the reference for an unmerged branch, open `/api/docs` on that branch's Vercel preview of source.coop.
